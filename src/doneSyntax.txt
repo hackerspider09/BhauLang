@@ -1,0 +1,33 @@
+# eg 1
+
+he bagh a = 10
+bol (a)
+jar (a<10):
+    bol ("yes less than 10")
+nasel tar (a<20):
+    bol ("yes less than 20")
+nahi tar:
+    bol ("not less than 10 or 20")
+
+
+
+# eg 2
+
+he bagh a = "hello" 
+he bagh a = hooo
+he bagh a = 56
+
+# eg 3
+
+joparyanta(a<5):
+    a = a + 1
+    bol ("helo world")
+
+
+# eg 4
+
+he bagh a = 4
+joparyanta (a > 0){
+    bol (a)
+    a = a -1
+}

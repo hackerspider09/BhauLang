@@ -1,0 +1,15 @@
+he bagh a = 8
+
+bol ("Number is 8")
+bol ("Output => ")
+
+jar (a < 5){
+    bol ("number less than 5")
+}nasel tar (a < 10){
+    bol ("number less than 10")
+}nasel tar (a < 15){
+    bol ("number less than 15")
+}
+nahi tar{
+    bol ("number is greater than 15")
+}

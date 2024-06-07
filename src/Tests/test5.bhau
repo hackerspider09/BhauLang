@@ -1,0 +1,11 @@
+he bagh a = 4
+
+bol ("Expected output => 4 3 2 1 (on new line)")
+
+bol ("Output => ")
+
+
+joparyanta (a > 0){
+    bol (a)
+    a = a -1
+}

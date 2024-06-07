@@ -1,0 +1,6 @@
+he bagh a = 6
+
+bol ("Expected ans => 6 ")
+bol ("Output => ")
+
+bol (a)
