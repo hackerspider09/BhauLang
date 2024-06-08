@@ -1,8 +1,3 @@
-Metadata-Version: 2.1
-Name: BhauLang
-Version: 0.2
-Description-Content-Type: text/markdown
-
 # BhauLang
 
 BhauLang is a toy programming language inspired by BhaiLang. It includes basic constructs for variable declaration, printing, conditionals, and loops.

@@ -20,8 +20,10 @@ def main():
 
     code_generator = CodeGen(parsed_code)
     executable_code = code_generator.get_executable_code()
-
-    exec(executable_code)
-
+    try :
+        exec(executable_code)
+    except Exception as e:
+        print("Error in execution : ",e)
+        
 if __name__ == "__main__":
     main()
