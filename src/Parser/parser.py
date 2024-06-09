@@ -152,6 +152,9 @@ class Parser:
             
             # other wise go below for body generation
             self.advance()
+            while(self.current_token.TYPE==tokens.TT_NEWLINE):
+                self.advance()
+            
 
             if self.current_token.TYPE == tokens.TT_LBRACE:
                 self.advance()
@@ -170,6 +173,9 @@ class Parser:
                     return None, "} necessary"
                 self.advance()
 
+                while(self.current_token.TYPE==tokens.TT_NEWLINE):
+                    self.advance()
+
 
                 # Check for else if block 
                 elif_nodes = []
@@ -181,7 +187,7 @@ class Parser:
                             elif_nodes.append(elif_node)
 
                             
-
+                
 
                 # Check for else block 
                 else_node, else_node_error = None,None

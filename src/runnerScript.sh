@@ -20,4 +20,4 @@ else
 fi
 
 
-python3 ./bhauRunner.py "$1"
+python3 ./runnerPyScript.py "$1"

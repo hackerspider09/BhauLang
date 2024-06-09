@@ -8,3 +8,5 @@ ARITHMETIC_OPERATORS = "+-*/<>"
 PARAN = "(){}"
 
 BOOLEAN_VALUE = ['hooo','nahi']
+
+SYMBOLS = [',']

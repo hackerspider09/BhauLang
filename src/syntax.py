@@ -116,3 +116,11 @@ try:
     exec(code)
 except Exception as e:
     print(e)
+
+print("hello")
+print("\n"+"hello")
+
+def f(indent=1):
+    print("ind ",indent)
+
+f()

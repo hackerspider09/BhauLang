@@ -93,11 +93,9 @@ nahi tar{
     bol ("not less than 10 or 20")
 }
 
-```
 
 Expected Output:
 
-```sh
 10
 yes less than 20
 ```
@@ -107,10 +105,10 @@ he bagh name = "hello"
 bol (name)
 he bagh number = 56
 bol (number)
-```
+
 
 Expected Output:
-```sh
+
 hello
 56
 ```
@@ -122,11 +120,11 @@ joparyanta ( a<5 ){
     bol (a)
     a = a + 1
 }
-```
+
 
 Expected Output:
 
-```
+
 0
 1
 2
@@ -142,14 +140,112 @@ joparyanta (countdown > 0){
     bol (countdown)
     countdown = countdown - 1
 }
-```
+
 
 Expected Output:
 
-```
 4
 3
 2
 1
 ```
-`BhauLang does not handle errors gracefully. It may crash or produce unexpected behavior if incorrect syntax or unsupported features are encountered.`
+
+- Example 5
+```sh
+he bagh n = 5
+he bagh i = 1
+joparyanta (i <= n){
+    he bagh j = n - i
+    he bagh line = ""
+    joparyanta (j > 0){
+        line = line + " "
+        j = j - 1
+    }
+    he bagh j = 1
+    joparyanta (j <= 2 * i - 1){
+        line = line + "*"
+        j = j + 1
+    }
+    bol(line)
+    i = i + 1
+}
+he bagh i = n - 1
+joparyanta (i > 0){
+    he bagh j = n - i
+    he bagh line = ""
+    joparyanta (j > 0){
+        line = line + " "
+        j = j - 1
+    }
+    he bagh j = 1
+    joparyanta (j <= 2 * i - 1){
+        line = line + "*"
+        j = j + 1
+    }
+    bol(line)
+    i = i - 1
+}
+
+
+
+Expected Output:
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+```
+
+- Example 6 (Fibonacci Sequence)
+```
+he bagh n = 10
+he bagh a = 0
+he bagh b = 1
+he bagh i = 0
+joparyanta (i < n){
+    bol(a)
+    he bagh temp = a
+    a = b
+    b = temp + b
+    i = i + 1
+}
+
+Expected Output :
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+```
+
+- Example 7 (Factorial Calculation)
+```
+he bagh n = 5
+he bagh factorial = 1
+he bagh i = 1
+joparyanta (i <= n){
+    factorial = factorial * i
+    i = i + 1
+}
+bol("Factorial of " , n , " is " , factorial)
+
+
+Expected Output :
+
+Factorial of  5  is  120
+```
+
+
+
+
+`BhauLang currently lacks proper error handling, so it may crash or produce unexpected errors if incorrect syntax or unsupported features are encountered.`

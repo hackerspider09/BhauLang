@@ -99,7 +99,9 @@ class Laxer:
         if (self.current_char == "=" ):
             return tokens.TT_OPERATOR , self.current_char
         
-        
+        if self.current_char in constants.SYMBOLS :
+            return tokens.TT_SYMBOL , self.current_char
+
         
         
         return None, None
